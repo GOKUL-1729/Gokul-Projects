@@ -16,10 +16,11 @@ def inputNumber(sub):
         a = st.number_input(f"Enter the number of periods for '{x}': ",step = 1,key = x)
         period.append(a)
 
+    st.write("Total no. of periods entered =",sum(period))
+
     if sum(period) > 48:
         st.write("Too many periods alloted for a week.")
         return None
-
     return period
 
 def choose(sub,period):
@@ -96,5 +97,6 @@ else:
     print(day)
     show(day)
     
+
 
 
