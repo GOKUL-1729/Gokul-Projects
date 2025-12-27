@@ -64,7 +64,8 @@ period = inputNumber(sub)
 print(period)
 
 if period == None:
-    st.write("Please run the program again.")
+    st.write("Please change the number of periods.")
+    st.write("NOTE: A total of 48 periods is requested.")
 else:
     peri = choose(sub,period)
     day1 = []
@@ -95,4 +96,5 @@ else:
     print(day)
     show(day)
     
+
 
