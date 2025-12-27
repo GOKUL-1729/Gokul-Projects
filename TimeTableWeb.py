@@ -1,6 +1,4 @@
 import streamlit as st
-import os
-import signal
 import random
 
 def inputSub():
@@ -59,10 +57,6 @@ def show(day):
             a += 1
             st.write()
 
-col1,col2 = st.columns([10,2])
-if col2.button("Close"):
-    os.kill(os.getpid(), signal.SIGTERM)
-
 st.title("Welcome to Time-Table Generator!")
 sub = inputSub()
 print(sub)
@@ -101,3 +95,4 @@ else:
     print(day)
     show(day)
     
+
