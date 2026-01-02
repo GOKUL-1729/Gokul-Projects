@@ -17,14 +17,14 @@ def subjects(cls):
     
     sub = []
     for n in range(subject):
-        sub.append((st.text_input(f"Enter the subject no. {n+1}: ")).upper())
+        sub.append((st.text_input(f"Enter the subject no. {n+1}: ",key = n)).upper())
         
     return sub
 
 def number(sub,cls):
     num = []
     for n in sub:
-        num.append(st.number_input(f"Enter the number of periods for '{n}': ",step = 1))
+        num.append(st.number_input(f"Enter the number of periods for '{n}': ",step = 1,key = n))
     if sum(num) != 48:
         st.write("48 periods is necessary")
         return None
@@ -92,3 +92,4 @@ for y in range(1,len(table)+1):
     print()
     show(table,y,sub)
     y+=1
+
